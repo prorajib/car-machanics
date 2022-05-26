@@ -65,6 +65,32 @@ run().catch(console.dir);
 app.get('/', (req, res) => {
   res.send('Server is running.');
 });
+
+app.get('/hello', (req, res) => {
+  res.send('Hello everyone');
+});
 app.listen(port, () => {
   console.log('Listening port  ', port);
 });
+
+/*
+One time:
+1. heroku account open
+2. Heroku softare install
+
+## For Every Project
+1. git init
+2. .gitignore
+3. .gitignore(node_module, .env)
+4. push everything to git
+5. make sure you have this script: "start":"node index.js"
+6. heroku login
+7. heroku create (only one time for a project)
+8. command: git push heroku main
+---------
+update:
+1. save everything check locally
+2. git add ., git commit -m, git push
+3. git push heroku main
+4.
+*/
